@@ -2,7 +2,7 @@
 layout: post
 title: "CS 499 Existing Code Base Review"
 date: 2026-04-02
-categories: CODE-REVIEW
+categories: [CODE-REVIEW]
 ---
 
 # Code Review: Deep Q-Network & Raspberry Pi State Machine
