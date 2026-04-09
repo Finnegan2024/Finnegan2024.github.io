@@ -14,7 +14,7 @@ categories: [CODE-REVIEW]
 
 This post documents a review of a Deep Q-Network & a Raspberry Pi State Machine, including its current architecture, implementation decisions, technical weaknesses, and the improvements I plan to make next.
 
-The goal of the review was simple: understand the system as it exists today, identify what is working, identify what is fragile, and define a clear path toward a stronger version of the project.
+The goal of the review was simple: understand the system as is, identify what is working, identify what needs improved, and define a clear path toward a stronger version of the project.
 
 ## What the Projects Do
 
@@ -28,58 +28,11 @@ This project is a Raspberry Pi–based thermostat implemented as a finite state 
 
 ## What I Reviewed
 
-During the review, I focused on the parts of the project that matter most in a real engineering setting:
+During the review, I focused on:
 
 - overall structure and separation of concerns
 - readability and maintainability
 - algorithmic efficiency
 - data handling and persistence
 - validation, reliability, and edge cases
-
-## Key Findings
-
-### What’s working
-
-## Deep Q-Network
-- The project successfully defines a custom maze environment where the agent can interact with the grid, receive rewards, and attempt to reach the goal.
-- The neural network, training loop, and exploration logic are all connected well enough to let the agent learn through repeated episodes.
-- The artifact already demonstrates the core reinforcement learning pipeline, including state observation, action selection, reward processing, and experience replay.
-
-## Raspberry Pi State Machine
-- The thermostat state machine correctly supports the three main operating states: off, heat, and cool.
-- The hardware integration is functional, with buttons triggering state and setpoint changes while the LEDs and LCD provide live feedback.
-- The system also sends periodic status updates over serial communication, showing that the thermostat logic and external reporting are already connected.
-
-### What needs improvement
-
-## Deep Q-Network
-- The project is not very modular yet, since environment logic, model setup, training behavior, and evaluation are closely packed together instead of being separated more cleanly
-- The current implementation could do a better job tracking performance with clearer benchmarking, comparison metrics, and testing across training runs.
-- The replay and training strategy can be improved for efficiency and scalability, especially if the goal is to compare standard replay against stronger approaches like prioritized experience replay.
-
-## Raspberry Pi State Machine
-- The thermostat code is tightly coupled to the hardware and runtime flow, which makes it harder to test, maintain, or extend without refactoring.
-- Input validation, error handling, and defensive programming around sensor reads, serial communication, and external failures could be stronger.
-- The data reporting approach is basic and would benefit from more structured, secure, and reliable handling if the system is expanded beyond a simple prototype.
-
-## Engineering Takeaways
-
-The biggest takeaway from this review is that working code is only the baseline. A stronger implementation needs to be easier to read, easier to maintain, safer around bad input, and more deliberate in how it handles data and structure.
-
-This review helped me identify where the current version behaves like a class project and where it needs to evolve toward production-minded engineering.
-
-## Next Steps
-
-Based on the review, my next improvements will focus on:
-
-- refactoring for cleaner structure
-- improving reliability and defensive programming
-- strengthening the algorithmic side of the implementation
-- improving persistence and data handling
-- making the project easier to extend and maintain
-
-## Why This Review Matters
-
-I see code review as one of the most important engineering habits. It forces a project to be evaluated beyond “it runs” and pushes the work toward stronger design decisions, clearer tradeoffs, and better long-term quality.
-
 This review is the baseline for the next version of the project.
