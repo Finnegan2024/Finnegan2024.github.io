@@ -10,10 +10,10 @@ Welcome to my GitHub Pages site.
 ## Posts
 
 <ul>
-  {% raw %}{% for post in site.posts %}{% endraw %}
+  {% for post in site.posts %}
     <li>
-      <a href="{% raw %}{{ post.url }}{% endraw %}">{% raw %}{{ post.title }}{% endraw %}</a>
-      <small>— {% raw %}{{ post.date | date: "%B %d, %Y" }}{% endraw %}</small>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <small>— {{ post.date | date: "%B %d, %Y" }}</small>
     </li>
-  {% raw %}{% endfor %}{% endraw %}
+  {% endfor %}
 </ul>
