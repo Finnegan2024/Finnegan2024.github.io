@@ -7,6 +7,8 @@ categories: [DATA-STRUCTURES, ALGORITHMS, DEEP-Q-NETWORK]
 
 # Enhancement #2: Deep Q-Network Optimization
 
+**Repository:** [DQN](https://github.com/Finnegan2024/Finnegan2024.github.io/tree/a55dc152f95aa100d7f2bd5c003a57ac9efa6fed/DQN)
+
 ## Overview
 
 This enhancement replaces the DQN's uniform experience replay buffer with **Prioritized Experience Replay (PER)** utilizing a **SumTree data structure**. The objective is to improve **sampling time complexity** from O(N) to O(log N). End-to-end training throughput involves separate trade-offs. For example, per-sample `predict()` is consciously left out of scope. The focus here is on the algorithmic and structural improvement to the sampling mechanism itself.
