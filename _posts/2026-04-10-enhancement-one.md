@@ -7,7 +7,7 @@ categories: [EMBEDDED-SYSTEMS, STATE-MACHINE]
 
 # Enhancement #1: Raspberry Pi Thermostat — Software Design and Engineering
 
-**Repository:** 
+**Repository:** [Thermostat](https://github.com/Finnegan2024/Finnegan2024.github.io/tree/9200bceea337f510e3a3fefe2edae5a6b6dee472/Thermostat)
 
 ## Overview
 
