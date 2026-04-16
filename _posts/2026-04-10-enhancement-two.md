@@ -3,9 +3,9 @@ layout: post
 title: "Enhancement #2: Deep Q-Network with Prioritized Experience Replay"
 date: 2026-04-10
 categories: [DATA-STRUCTURES, ALGORITHMS, DEEP-Q-NETWORK]
+author: Finnegan Thomas
 ---
-
-# Enhancement #2: Deep Q-Network Optimization
+{{ post.author }}
 
 **Repository:** [DQN](https://github.com/Finnegan2024/Finnegan2024.github.io/tree/a55dc152f95aa100d7f2bd5c003a57ac9efa6fed/DQN)
 
