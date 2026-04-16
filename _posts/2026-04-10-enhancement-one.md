@@ -118,3 +118,5 @@ This is appropriate for a development simulator but would need to move to persis
 The most instructive part of this enhancement was thinking through the boundary between the device and the server as a security surface rather than just a communication channel. A payload without a signature represents unauthenticated data. Adding HMAC forces the question of key management, serialization determinism, and what exactly is being signed. These decisions are easy to get subtly wrong. The choice to sort keys before signing, for instance, is not clear until you consider what happens when two packets produce the same data in different byte orders.
 
 Extracting `PayloadGenerator` also reinforced the value of separation of concerns in embedded contexts. Device logic and data formatting have different reasons to change and different testing surfaces. Keeping them separate made both easier to reason about.
+
+{{ post.categories }}
