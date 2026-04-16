@@ -9,9 +9,9 @@ author: Finnegan Thomas
 
 # Code Review: Deep Q-Network & Raspberry Pi State Machine
 
-[**Video Walkthrough:**](https://youtu.be/gEPCJszszJg)
+**Video Walkthrough:** [Click Here](https://youtu.be/gEPCJszszJg)
 
-[**Repository:**](https://github.com/Finnegan2024/Finnegan2024.github.io)
+**Repository:** [Click Here](https://github.com/Finnegan2024/Finnegan2024.github.io)
 
 ## Overview
 
