@@ -111,16 +111,6 @@ def validateAndStoreNonce(deviceId, nonce):
 
 This is appropriate for a development simulator but would need to move to persistent storage in production. The full server enhancement addresses this with a proper database implementation.
 
-## Known Limitations
-
-The shared secret key is hardcoded in both `Thermostat.py` and the simulator:
-
-```python
-secretKey = "This is my secret key".encode("utf-8")
-```
-
-Both files include inline comments acknowledging this needs to move to an environment variable. This is the correct production approach as the key should never live in source, and both sides of the channel should read it from a secured environment at runtime.
-
 ## Reflection
 
 The most instructive part of this enhancement was thinking through the boundary between the device and the server as a security surface rather than just a communication channel. A payload without a signature represents unauthenticated data. Adding HMAC forces the question of key management, serialization determinism, and what exactly is being signed. These decisions are easy to get subtly wrong. The choice to sort keys before signing, for instance, is not clear until you consider what happens when two packets produce the same data in different byte orders.
