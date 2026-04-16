@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 320px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Tasks</title>
+</head>
+<body>
+    <h1>Task Management</h1>
+
+    <h2>Create Task</h2>
+    <form action="/tasks/create" method="post">
+        <label>Task Name</label>
+        <input type="text" name="task_name" required>
+
+        <label>Task Issue</label>
+        <textarea name="task_issue" required></textarea>
+
+        <button type="submit">Create Task</button>
+    </form>
+
+    <h2>Existing Tasks</h2>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                <strong>{{ task.task_name }}</strong> - {{task.task_issue }}
+                <br>
+                Created by {{ task.created_by }} on {{ task.created_on }}
+                <br>
+                {% if task.resolved_on %}
+                    Resolved by {{ task.resolved_by }} on {{ task.resolved_on }}
+                {% else %}
+                    <form action="/tasks/resolve/{{ task.task_id }}" method="post">
+                        <button type="submit">Resolve</button>
+                    </form>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

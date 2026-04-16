@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Accounts</title>
+</head>
+<body>
+    <h1>Account Management</h1>
+
+    <h2>Create Account</h2>
+    <form action="/accounts/create" method="post">
+        <label>Accounts Name</label>
+        <input type="text" name="account_name" required>
+
+        <label>Password</label>
+        <input type="password" name="password" required>
+
+        <label>Role</label>
+        <select name="role" required>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select>
+
+        <button type="submit">Create Account</button>
+    </form>
+
+    <h2>Existing Accounts</h2>
+    <ul>
+        {% for account in accounts %}
+            <li>
+                {{ account.account_name }} - {{ account.role }}
+                <form action="/accounts/role/{{ account.account_id }}" method="post" style="display: inline;">
+                    <select name="role">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                    <button type="submit">Update Role</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
