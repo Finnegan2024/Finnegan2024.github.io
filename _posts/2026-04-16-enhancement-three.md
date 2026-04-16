@@ -3,7 +3,9 @@ layout: post
 title: "Enhancement #3: FastAPI Thermostat Server with Secure Database Integration"
 date: 2026-04-16
 categories: [DATABASES, FASTAPI, SECURITY]
+author: Finnegan Thomas
 ---
+{{ post.author }}
 
 **Repository:** [Thermostat Server](https://github.com/Finnegan2024/Finnegan2024.github.io/tree/main/thermostat_server)
 
