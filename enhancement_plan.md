@@ -1,9 +1,10 @@
-# Artifact Selection for Enhancement /#1
+# Artifact Selection for Enhancement #1
 I plan on using a thermostat.py file artifact which leverages a raspberry pi 4 with a temperature & humidity sensor, leds, and buttons to relay state information via an LCD screen while also sending the state information (serially) to a server (a secondary script). This artifact originates from the CS 350 class.
 
 ## Plan Description
 I plan on creating a secure device-to-server pipeline that implements device identification, secure transportation, authentication, replay protection, and secure storage of data. This plan incorporates separation of concerns, reliability, security, and maintainability as software engineering & design enhancements.
-![Device-to-Server data transportation flow chart]()
+
+![Device-to-Server data transportation flow chart](https://github.com/Finnegan2024/Finnegan2024.github.io/blob/main/thermostat_device/Flowchart.png)
 
 ## Mapping Skills from Enahancement to Course Outcomes
 This enhancement focuses on improving the quality of an existing code base, addressing limitations, and mitigating vulnerabilities to highlight my knowledge within embedded systems and cybersecurity.
