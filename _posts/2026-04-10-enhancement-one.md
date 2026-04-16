@@ -5,8 +5,6 @@ date: 2026-04-10
 categories: [EMBEDDED-SYSTEMS, STATE-MACHINE]
 ---
 
-# Enhancement #1: Raspberry Pi Thermostat — Software Design and Engineering
-
 **Repository:** [Thermostat Device](https://github.com/Finnegan2024/Finnegan2024.github.io/tree/main/thermostat_device)
 
 ## Overview
