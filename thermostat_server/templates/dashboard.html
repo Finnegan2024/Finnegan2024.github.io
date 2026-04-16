@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to {{ account.account_name }}'s Dashboard</h1>
+
+    {% if not devices %}
+        <p>No devices found</p>
+    {% else %}
+        <select id="device-select">
+            {% for device in devices %}
+                <option value="{{ device.device_name }}"
+                    {% if selected_device and device.device_name == selected_device.device_name %}selected{% endif %}>
+                    {{ device.device_name }}
+                </option>
+            {% endfor %}
+        </select>
+
+        <div id="latest-reading-container">
+            {% if latest_reading %}
+                <h2>Latest Reading</h2>
+                <p>State: {{ latest_reading.state }}</p>
+                <p>Set Point: {{ latest_reading.set_point }}</p>
+                <p>Current Temperature: {{ latest_reading.current_temp }}</p>
+                <p>Timestamp: {{ latest_reading.timestamp }}</p>
+            {% else %}
+                <h2>Latest Reading</h2>
+                <p>No Readings Found</p>
+            {% endif %}
+        </div>
+    {% endif %}
+</body>
+</html>
+
+<script>
+    const deviceSelect = document.getElementById("device-select");
+    const latestReadingContainer = document.getElementById("latest-reading-container");
+
+    if (deviceSelect) {
+        deviceSelect.addEventListener("change", async function () {
+            const deviceName = deviceSelect.value;
+
+            const response = await fetch(`/latest-reading?device_name=${encodeURIComponent(deviceName)}`)
+            const data = await response.json()
+
+            if (!data.success) {
+                latestReadingContainer.innerHTML = `
+                <h2>Latest Reading</h2>
+                <p>${data.reason}</p>`;
+                return;
+            }
+
+            if (!data.reading) {
+                latestReadingContainer.innerHTML = `
+                <h2>Latest Reading</h2>
+                <p>No Readings Found</p>`;
+                return;
+            }
+
+            latestReadingContainer.innerHTML = `
+                <h2>Latest Reading</h2>
+                <p>State: ${data.reading.state}</p>
+                <p>Set Point: ${data.reading.set_point}</p>
+                <p>Current Temperature: ${data.reading.current_temp}</p>
+                <p>Timestamp: ${data.reading.timestamp}</p>`;
+        });
+    }
+</script>

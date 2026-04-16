@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/styles.css"
+</head>
+<body>
+    <h1>Thermostat Login</h1>
+
+    <form action="/login" method="post">
+        <label for="account_name">Account name</label>
+        <input type="text" id="account_name" name="account_name" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Sign In</button>
+    </form>
+
+    <p>{{ message }}</p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to {{ admin }}'s Dashboard</h1>
+
+    <h2>Summary</h2>
+    <ul>
+        <li>Total Accounts: {{ account_count }}</li>
+        <li>Total Devices: {{ device_count }}</li>
+        <li>Total Tasks: {{ task_count }}</li>
+    </ul>
+
+    <nav>
+        <a href="/accounts">Manage Accounts</a><br>
+        <a href="/devices">Mange Devices</a><br>
+        <a href="/tasks">Manage Tasks</a>
+    </nav>
+</body>
+</html>
