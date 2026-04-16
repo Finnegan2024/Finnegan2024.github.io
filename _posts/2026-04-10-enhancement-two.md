@@ -7,7 +7,7 @@ author: Finnegan Thomas
 ---
 {{ post.author }}
 
-**Repository:** [DQN](https://github.com/Finnegan2024/Finnegan2024.github.io/tree/a55dc152f95aa100d7f2bd5c003a57ac9efa6fed/DQN)
+**Repository:** [DQN](https://github.com/Finnegan2024/Finnegan2024.github.io/tree/main/DQN)
 
 ## Overview
 
