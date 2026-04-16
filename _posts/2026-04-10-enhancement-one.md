@@ -3,7 +3,9 @@ layout: post
 title: "Enhancement #1: Raspberry Pi Thermostat with State Machine and Secure Telemetry"
 date: 2026-04-10
 categories: [EMBEDDED-SYSTEMS, STATE-MACHINE]
+author: Finnegan Thomas
 ---
+{{ post.author }}
 
 **Repository:** [Thermostat Device](https://github.com/Finnegan2024/Finnegan2024.github.io/tree/main/thermostat_device)
 
