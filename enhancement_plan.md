@@ -30,7 +30,7 @@ I plan on using a thermostat.py file artifact which leverages a raspberry pi 4 w
 ## Plan Description
 I plan on creating a secure device-to-server pipeline that implements device identification, secure transportation, authentication, replay protection, and secure storage of data. This plan incorporates schema designs, meaningful queries, constraints, and mitigations as database enhancements.
 
-![Data Flow Diagram for Enhancement #3]()
+![Data Flow Diagram for Enhancement #3](https://github.com/Finnegan2024/Finnegan2024.github.io/blob/main/thermostat_server/DFD.png)
 
 ## Mapping Skills from Enhancement to Course Outcomes
 This enhancement focuses on improving the quality of an existing code base, addressing limitations, and mitigating vulnerabilities to highlight my knowledge within embedded systems and cybersecurity.
